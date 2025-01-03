@@ -6,19 +6,6 @@ const cors = require('cors');
 const app = express()
 
 
-
-mongoose.connect()
-mongoose.connection.on('error', function (e) {
-    console.log('Can not connect Error:>>', e);
-    process.exit();
-});
-mongoose.connection.once('open', function (d) {
-    console.log("Successfully connected to the database");
-})
-
-
-
-
 app.post('award', async (req, res) => {
     const { name } = req.body;
 
